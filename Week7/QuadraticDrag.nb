@@ -1,731 +1,308 @@
-(* Content-type: application/mathematica *)
+(* Content-type: application/vnd.wolfram.mathematica *)
 
 (*** Wolfram Notebook File ***)
 (* http://www.wolfram.com/nb *)
 
-(* CreatedBy='Mathematica 7.0' *)
+(* CreatedBy='Mathematica 8.0' *)
 
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       145,          7]
-NotebookDataLength[     46290,       1066]
-NotebookOptionsPosition[     44538,       1012]
-NotebookOutlinePosition[     44873,       1027]
-CellTagsIndexPosition[     44830,       1024]
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     37210,        863]
+NotebookOptionsPosition[     36514,        835]
+NotebookOutlinePosition[     36867,        851]
+CellTagsIndexPosition[     36824,        848]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{
-   RowBox[{"g", "=", "9.8"}], ";"}], " ", 
   RowBox[{"(*", 
-   RowBox[{"grav", ".", " ", "constant"}], "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[Theta]0", "=", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"50", "*", "Pi"}], ")"}], " ", "/", " ", "180"}]}], ";"}], " ", 
-  
-  RowBox[{"(*", 
-   RowBox[{"50", " ", "degrees", " ", "in", " ", "radians"}], 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"v0", " ", "=", " ", "30"}], ";"}], " ", 
-  RowBox[{"(*", 
-   RowBox[{"starting", " ", "from", " ", "30", " ", 
-    RowBox[{"m", "/", "s"}]}], "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"vt", "=", "1.5"}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"ode1", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"(", 
-         RowBox[{"g", " ", "*", " ", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
-           RowBox[{"vt", "^", "2"}]}]}], ")"}]}], " ", 
-       RowBox[{"Sqrt", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], " ", "+", " ", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], ",", 
-     
-     RowBox[{
-      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
-      RowBox[{"v0", "*", 
-       RowBox[{"Cos", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"ode2", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"y", "''"}], "[", "t", "]"}], " ", "\[Equal]", " ", 
-      RowBox[{
-       RowBox[{"-", "g"}], "*", 
-       RowBox[{"(", 
-        RowBox[{"1", " ", "+", " ", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
-            RowBox[{"vt", "^", "2"}]}], ")"}], "  ", 
-          RowBox[{"Sqrt", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], " ", "+", " ", 
-            
-            RowBox[{
-             RowBox[{
-              RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
-        ")"}]}]}], ",", " ", 
-     RowBox[{
-      RowBox[{"y", "[", "0", "]"}], " ", "\[Equal]", " ", "2"}], ",", " ", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"y", "'"}], "[", "0", "]"}], " ", "\[Equal]", " ", 
-      RowBox[{"v0", "*", 
-       RowBox[{"Sin", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"sol", "=", 
-   RowBox[{"NDSolve", "[", 
-    RowBox[{"ode1", ",", " ", "ode2", ",", "x", ",", "y", ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", "0", ",", "200"}], "}"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"myplot1", "=", 
-   RowBox[{"ParametricPlot", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"x", "[", "t", "]"}], ",", 
-       RowBox[{
-        RowBox[{"y", "[", "t", "]"}], "/.", "sol"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", "0", ",", "200"}], "}"}], ",", 
-     RowBox[{"AxesLabel", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"x", "[", "t", "]"}], ",", 
-        RowBox[{"y", "[", "t", "]"}]}], "}"}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"Show", "[", "myplot1", "]"}]}], "Input",
- CellChangeTimes->{{3.4941618998598137`*^9, 3.4941619588657084`*^9}, 
-   3.49416200170741*^9, {3.494162159839367*^9, 3.494162264850087*^9}, {
-   3.4941622953964167`*^9, 3.494162314363269*^9}, {3.494162429878344*^9, 
-   3.494162429931975*^9}, {3.494162689372713*^9, 3.494162709813946*^9}, {
-   3.4941627527093143`*^9, 3.494162752876684*^9}, {3.494162969971979*^9, 
-   3.494162984039895*^9}, {3.494163074268774*^9, 3.494163197175642*^9}, {
-   3.4941632664519243`*^9, 3.494163266509802*^9}, {3.494163302388669*^9, 
-   3.494163302618104*^9}, {3.494167125909374*^9, 3.494167127043168*^9}, {
-   3.494178629013938*^9, 3.4941786941328583`*^9}, {3.494178743416378*^9, 
-   3.494178753982154*^9}, {3.494178806776251*^9, 3.49417889255365*^9}, {
-   3.577548930912209*^9, 3.577549058993216*^9}, {3.577733074954968*^9, 
-   3.577733150676943*^9}, {3.5777332268436747`*^9, 3.577733311487481*^9}, {
-   3.577733378993726*^9, 3.577733530647931*^9}, {3.577733576151483*^9, 
-   3.577733658722378*^9}, {3.577733703489974*^9, 3.577733755159328*^9}, {
-   3.577733912666367*^9, 3.577733926647628*^9}, {3.577733993910377*^9, 
-   3.5777340370520067`*^9}, {3.577734230693047*^9, 3.577734248619266*^9}, {
-   3.577734307083151*^9, 3.577734336701376*^9}, {3.5777343838929768`*^9, 
-   3.577734467065392*^9}, {3.577734498983976*^9, 3.5777345024192133`*^9}, {
-   3.577804047612458*^9, 3.577804067332261*^9}, {3.578068592514386*^9, 
-   3.578068593069689*^9}, {3.5780694523205767`*^9, 3.578069456416482*^9}, {
-   3.578073934143545*^9, 3.5780739511812353`*^9}, {3.5780807275135508`*^9, 
-   3.5780807286763687`*^9}, {3.578080855310896*^9, 3.578080865116806*^9}, {
-   3.578080928410781*^9, 3.5780809503026943`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsfun"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
-\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[t]\\)\\) \
-\[Equal] \\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((1 + \\(\\(0.4444444444444444`\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[t]\\)\\)\\\\ \
-\\@\\(\\(\\(\\(\\*SuperscriptBox[\\(\[LeftSkeleton] 1 \[RightSkeleton]\\), \
-TagBox[\\((\\(\[LeftSkeleton] 1 \[RightSkeleton]\\))\\), Derivative], \
-Rule[MultilineFunction, None]]\\)\\)[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\
-\\)\\)]\\)\\^2 + \\(\\(\\(\\*SuperscriptBox[\\(\[LeftSkeleton] 1 \
-\[RightSkeleton]\\), TagBox[\\((\\(\[LeftSkeleton] 1 \[RightSkeleton]\\))\\), \
-Derivative], Rule[MultilineFunction, None]]\\)\\)[\\(\\(\[LeftSkeleton] 1 \
-\[RightSkeleton]\\)\\)]\\)\\^2\\)\\)\\))\\)\\)\\)\\)\\)\[NoBreak] cannot be \
-used as a function. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsfun\\\", ButtonNote -> \
-\\\"NDSolve::dsfun\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951096586*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(0.004081632653061225`\\)\[NoBreak] cannot \
-be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.5780809511029177`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\) \[Equal] \
-\\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \\(\\(\\(\\(\\*SuperscriptBox[\\\"x\
-\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\)\\\\ \\@\\(\\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
-\[Equal] \\(\\(30\\\\ \\(\\(Sin[\\(\\(\\(2\\\\ \
-\[Pi]\\)\\/9\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
-\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
-\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\) \[Equal] \
-\\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((1 + \\(\\(0.4444444444444444`\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\(\[LeftSkeleton] 1 \[RightSkeleton]\\), \
-TagBox[\\((\\(\[LeftSkeleton] 1 \[RightSkeleton]\\))\\), Derivative], \
-Rule[MultilineFunction, None]]\\)\\)[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\
-\\)\\)]\\)\\)\\\\ \\(\\(Power[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\
-\\)\\)\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 2\\)\\), \\(\
-\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
-\\(\\(Cos[\\(\\(\\(2\\\\ \[Pi]\\)\\/9\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), x, y, \
-\\(\\({0.004081632653061225`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is \
-neither a list of replacement rules nor a valid dispatch table, and so cannot \
-be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
-\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951108076*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(0.004081632653061225`\\)\[NoBreak] cannot \
-be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951115129*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\) \[Equal] \
-\\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \\(\\(\\(\\(\\*SuperscriptBox[\\\"x\
-\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\)\\\\ \\@\\(\\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
-\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[0.004081632653061225`]\\)\\) \[Equal] \
-\\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \
-\\(\\(0.4444444444444444`\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\(\[LeftSkeleton] 1 \[RightSkeleton]\\), \
-TagBox[\\((\\(\[LeftSkeleton] 1 \[RightSkeleton]\\))\\), Derivative], \
-Rule[MultilineFunction, None]]\\)\\)[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\
-\\)\\)]\\)\\)\\\\ \\(\\(Power[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\
-\\)\\)\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0.`]\\)\\) \[Equal] 2.`\\)\\), \
-\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-22.98133329356934`\\)\\)}\\)\\), x, y, \\(\\({0.004081632653061225`, 0.`, \
-200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] is neither a list of replacement \
-rules nor a valid dispatch table, and so cannot be used for replacing. \\!\\(\
-\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
-ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951120214*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(4.085714285714285`\\)\[NoBreak] cannot be \
-used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951126933*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
-:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.5780809511319447`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[4.085714285714285`]\\)\\) \[Equal] \
-\\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \\(\\(\\(\\(\\*SuperscriptBox[\\\"x\
-\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[4.085714285714285`]\\)\\)\\\\ \\@\\(\\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\) + \\(\\(Power[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
-\[Equal] \\(\\(30\\\\ \\(\\(Sin[\\(\\(\\(2\\\\ \
-\[Pi]\\)\\/9\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
-\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
-\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[4.085714285714285`]\\)\\) \[Equal] \\(\\(\\(\\(-9.8`\\)\\)\\\\ \
-\\(\\((1 + \\(\\(0.4444444444444444`\\\\ \\(\\(\\(\\(\\*SuperscriptBox[\\(\
-\[LeftSkeleton] 1 \[RightSkeleton]\\), TagBox[\\((\\(\[LeftSkeleton] 1 \
-\[RightSkeleton]\\))\\), Derivative], Rule[MultilineFunction, \
-None]]\\)\\)[\\(\\(\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\)\\\\ \
-\\(\\(Power[\\(\\(\[LeftSkeleton] 2 \
-\[RightSkeleton]\\)\\)]\\)\\)\\)\\))\\)\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(y[0]\\)\\) \[Equal] 2\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"y\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
-\[Equal] \\(\\(30\\\\ \\(\\(Cos[\\(\\(\\(2\\\\ \
-\[Pi]\\)\\/9\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), x, y, \
-\\(\\({4.085714285714285`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a \
-list of replacement rules nor a valid dispatch table, and so cannot be used \
-for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
-\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951137103*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
-\[NoBreak] will be suppressed during this calculation. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
-ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.5780808666148043`*^9, {3.578080932685113*^9, 3.578080951143744*^9}}],
-
-Cell[BoxData[
- GraphicsBox[GraphicsComplexBox[CompressedData["
-1:eJxTTMoPSmViYGAwAmIQPQpGwSjADQD2ewHg
-   "], {}],
-  Axes->True,
-  AxesLabel->{
-    FormBox[
-     RowBox[{"x", "(", "t", ")"}], TraditionalForm], 
-    FormBox[
-     RowBox[{"y", "(", "t", ")"}], TraditionalForm]},
-  AxesOrigin->{0, 0},
-  PlotRange->{{0., 1.}, {0., 1.}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{
-    Scaled[0.02], 
-    Scaled[0.02]}]], "Output",
- CellChangeTimes->{
-  3.578073953898222*^9, 3.5780807305134907`*^9, 3.5780808666723223`*^9, {
-   3.578080932736499*^9, 3.578080951149027*^9}}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.578069471022291*^9, 3.578069472452421*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.494162004524008*^9, 3.494162076852659*^9}, {
-   3.494162433062894*^9, 3.494162433108081*^9}, {3.494162592059354*^9, 
-   3.4941625983662167`*^9}, {3.494162757151064*^9, 3.494162787005321*^9}, {
-   3.4941628547936563`*^9, 3.494162856894761*^9}, {3.494162887335985*^9, 
-   3.494162892983869*^9}, {3.494162976794415*^9, 3.494163001498172*^9}, {
-   3.494163071893292*^9, 3.4941630719595547`*^9}, {3.494163240196003*^9, 
-   3.494163243631948*^9}, {3.494178674109873*^9, 3.494178699548072*^9}, {
-   3.577549065982582*^9, 3.577549072700952*^9}, 3.577549145166576*^9, {
-   3.577803851105309*^9, 3.5778038559449377`*^9}, {3.5778039171384993`*^9, 
-   3.5778039701041527`*^9}, {3.577804078133247*^9, 3.577804087880549*^9}, 
-   3.577804530285212*^9, {3.577804798073238*^9, 3.577804834893135*^9}, {
-   3.577805020913432*^9, 3.577805037072617*^9}, 3.577805157614271*^9, {
-   3.577805441249558*^9, 3.577805442620282*^9}, {3.5780688248172894`*^9, 
-   3.578068825359326*^9}, {3.578069284818633*^9, 3.578069311196004*^9}, {
-   3.578070391387905*^9, 3.578070394011064*^9}, {3.57807043289734*^9, 
-   3.578070436861453*^9}, {3.578070508643332*^9, 3.5780705438617477`*^9}, 
-   3.578073931322549*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
-replacement rules nor a valid dispatch table, and so cannot be used for \
-replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
-\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
-\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.578070396028261*^9, 3.5780704384539833`*^9, {3.578070520783819*^9, 
-   3.5780705450056257`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], ":", 
-  " ", "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
-replacement rules nor a valid dispatch table, and so cannot be used for \
-replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
-\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
-\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- GeneratedCell->False,
- CellAutoOverwrite->False,
- CellChangeTimes->{
-  3.578070396028261*^9, 3.5780704384539833`*^9, {3.578070520783819*^9, 
-   3.578070545011697*^9}, 3.578074053362466*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
-replacement rules nor a valid dispatch table, and so cannot be used for \
-replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
-\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
-\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{
-  3.578070396028261*^9, 3.5780704384539833`*^9, {3.578070520783819*^9, 
-   3.578070545019576*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
-\[NoBreak] will be suppressed during this calculation. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
-ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- GeneratedCell->False,
- CellAutoOverwrite->False,
- CellChangeTimes->{
-  3.578070396028261*^9, 3.5780704384539833`*^9, {3.578070520783819*^9, 
-   3.578070545027473*^9}, 3.5780739659854937`*^9, 3.57807405712845*^9}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.4941620805077047`*^9, 3.494162130559312*^9}, {
-   3.494162438686253*^9, 3.4941624388214483`*^9}, {3.49416276111087*^9, 
-   3.4941627612842607`*^9}, {3.494163076540534*^9, 3.494163076603696*^9}, {
-   3.4941632000470552`*^9, 3.494163201262197*^9}, {3.494163247872136*^9, 
-   3.494163268710841*^9}, {3.494163305169607*^9, 3.494163305408745*^9}, {
-   3.4941671378365726`*^9, 3.494167137896326*^9}, {3.494178681693411*^9, 
-   3.494178704379784*^9}, {3.577549081756276*^9, 3.5775491266935997`*^9}, {
-   3.577804082260154*^9, 3.577804090956686*^9}, {3.57780543442039*^9, 
-   3.577805437303876*^9}, 3.578069634224433*^9}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.494162134647728*^9, 3.4941621507573*^9}, {
-   3.4941622413147984`*^9, 3.494162255928239*^9}, {3.494162609064744*^9, 
-   3.494162610408478*^9}, {3.494163058283469*^9, 3.494163060738275*^9}, {
-   3.577804094544883*^9, 3.577804100488923*^9}, 3.578073948311515*^9, 
-   3.5780740652842207`*^9}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.578074049241074*^9, 3.5780740493292*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.578069622283979*^9, 3.578069622353218*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.5780687570839243`*^9, 3.578068757148731*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"ode1", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"-", 
-        RowBox[{"(", 
-         RowBox[{"g", "*", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
-           RowBox[{"vt", "^", "2"}]}]}], ")"}]}], "*", 
-       RowBox[{"Sqrt", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], ",", 
-     
-     RowBox[{
-      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
-      RowBox[{"v0", "*", 
-       RowBox[{"Cos", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"ode2", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"y", "''"}], "[", "t", "]"}], "\[Equal]", 
-      RowBox[{
-       RowBox[{"-", "g"}], "*", 
-       RowBox[{"(", 
-        RowBox[{"1", "+", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
-            RowBox[{"vt", "^", "2"}]}], ")"}], "*", 
-          RowBox[{"Sqrt", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
-        ")"}]}]}], ",", 
-     RowBox[{
-      RowBox[{"y", "[", "0", "]"}], "\[Equal]", "2"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
-      RowBox[{"v0", "*", 
-       RowBox[{"Sin", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{"Manipulate", "[", 
-  RowBox[{
    RowBox[{
-    RowBox[{"{", 
-     RowBox[{"sol", "=", 
-      RowBox[{"NDSolve", "[", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"ode1", ",", "ode2"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"x", ",", "y"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"t", ",", "0", ",", "200"}], "}"}]}], "]"}]}], "}"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"ParametricPlot", "[", 
+   "human", " ", "cannonball", " ", "with", " ", "air", " ", "resistance"}], 
+   "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"xnd", "=", 
+    RowBox[{
+     RowBox[{"x", "[", "t", "]"}], "\[Equal]", 
+     RowBox[{"v0", "*", 
+      RowBox[{"Cos", "[", "\[Theta]0", "]"}], "*", "t"}]}]}], "\n", 
+   RowBox[{"ynd", "=", 
+    RowBox[{
+     RowBox[{"y", "[", "t", "]"}], "\[Equal]", 
+     RowBox[{"2", "+", 
+      RowBox[{"v0", "*", 
+       RowBox[{"Sin", "[", "\[Theta]0", "]"}], "*", "t"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"g", "*", 
+         RowBox[{"t", "^", "2"}]}], ")"}], "/", "2"}]}]}]}], "\n", 
+   RowBox[{
+    RowBox[{"g", "=", "9.8"}], ";", 
+    RowBox[{"v0", "=", "30"}], ";", 
+    RowBox[{"\[Theta]0", "=", 
      RowBox[{
-      RowBox[{"Evaluate", "[", 
+      RowBox[{"(", 
+       RowBox[{"50", "*", "Pi"}], ")"}], "/", "180"}]}], ";", 
+    RowBox[{"vt", "=", "135"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ode1", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{"g", "*", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
+               RowBox[{"vt", "^", "2"}]}]}], ")"}]}], "*", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
+         ",", 
+         RowBox[{
+          RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"v0", "*", 
+           RowBox[{"Cos", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], ";", "\n", 
+      RowBox[{"ode2", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"y", "''"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", "g"}], "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
+                RowBox[{"vt", "^", "2"}]}], ")"}], "*", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+               "]"}]}]}], ")"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"y", "[", "0", "]"}], "\[Equal]", "1"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"v0", "*", 
+           RowBox[{"Sin", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Module", "[", 
        RowBox[{
         RowBox[{"{", 
+         RowBox[{"sol", "=", 
+          RowBox[{"NDSolve", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"ode1", ",", "ode2"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "200"}], "}"}]}], "]"}]}], "}"}], 
+        ",", 
+        RowBox[{"ParametricPlot", "[", 
          RowBox[{
-          RowBox[{"x", "[", "t", "]"}], ",", 
-          RowBox[{"y", "[", "t", "]"}]}], "}"}], "/.", "sol"}], "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"t", ",", "0", ",", "200"}], "}"}], ",", 
-      RowBox[{"PlotStyle", "\[Rule]", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", "Blue", "}"}], ",", 
-         RowBox[{"{", "Red", "}"}]}], "}"}]}], ",", 
-      RowBox[{"AxesLabel", "\[Rule]", 
-       RowBox[{"{", 
-        RowBox[{"\"\<x(m)\>\"", ",", "\"\<y (m)\>\""}], "}"}]}], ",", 
-      RowBox[{"PlotRange", "\[Rule]", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"0", ",", "100"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"-", "10"}], ",", "50"}], "}"}]}], "}"}]}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", 
-       RowBox[{"{", 
-        RowBox[{"500", ",", "300"}], "}"}]}]}], "]"}]}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"x", "[", "t", "]"}], ",", 
+               RowBox[{"y", "[", "t", "]"}]}], "}"}], "/.", "sol"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"v0", "*", 
+               RowBox[{"Cos", "[", "\[Theta]0", "]"}], "*", "t"}], ",", 
+              RowBox[{"2", "+", 
+               RowBox[{"v0", "*", 
+                RowBox[{"Sin", "[", "\[Theta]0", "]"}], "*", "t"}], "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"g", "*", 
+                  RowBox[{"t", "^", "2"}]}], ")"}], "/", "2"}]}]}], "}"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "tf"}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "Blue", "}"}], ",", 
+             RowBox[{"{", "Red", "}"}]}], "}"}]}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "100"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "10"}], ",", "50"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<x(m)\>\"", ",", "\"\<y (m)\>\""}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"500", ",", "300"}], "}"}]}]}], "]"}]}], "]"}]}], ",", 
      RowBox[{"{", 
-      RowBox[{"v0", ",", "30", ",", "\"\<initial velocity (m/s)\>\""}], "}"}],
-      ",", "0.1", ",", "100", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], " ", ",", 
-   " ", 
-   RowBox[{"{", 
-    RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"v0", ",", "30", ",", "\"\<initial velocity (m/s)\>\""}], 
+        "}"}], ",", "0", ",", "100", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"\[Theta]0", ",", 
-       RowBox[{"50", "*", 
-        RowBox[{"Pi", "/", "180"}]}], ",", "\"\<initial angle (rad)\>\""}], 
-      "}"}], ",", ".1", ",", 
-     RowBox[{"\[Pi]", "/", "2"}], ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Theta]0", ",", 
+         RowBox[{"50", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", "\"\<initial angle (rad)\>\""}], 
+        "}"}], ",", ".1", ",", 
+       RowBox[{"\[Pi]", "/", "2"}], ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"vt", ",", "35", ",", "\"\<terminal velocity(m/s)\>\""}], "}"}],
-      ",", "0.1", ",", "100.", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"vt", ",", "35", ",", "\"\<terminal velocity(m/s)\>\""}], 
+        "}"}], ",", "0", ",", "150.", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"t", ",", "0", ",", "\"\<time (s)\>\""}], "}"}], ",", "0", ",", 
-     "10.", ",", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.577478475599698*^9, 3.5774784997979183`*^9}, {
-   3.577478534848688*^9, 3.577478567062739*^9}, 3.577490072664493*^9, {
-   3.577502720630567*^9, 3.5775027514202127`*^9}, 3.5775030057285748`*^9, 
-   3.577503078429886*^9, {3.577503108611413*^9, 3.577503166858922*^9}, {
-   3.577549179281249*^9, 3.577549221102922*^9}, {3.577549268358193*^9, 
-   3.577549405114224*^9}, {3.577549553049855*^9, 3.577549582375984*^9}, 
-   3.577549627541086*^9, {3.57754973813801*^9, 3.577549829233026*^9}, {
-   3.57754987411872*^9, 3.5775499131013613`*^9}, {3.577549955916011*^9, 
-   3.5775499892251*^9}, {3.577550221132785*^9, 3.5775502214075537`*^9}, {
-   3.577550744443714*^9, 3.5775508053235483`*^9}, {3.578070063127029*^9, 
-   3.578070109241872*^9}, {3.578070245993854*^9, 3.5780702940393353`*^9}, {
-   3.578070343314548*^9, 3.578070356572494*^9}, 3.578070569698411*^9, 
-   3.578070604430187*^9, {3.57807068075578*^9, 3.578070717521565*^9}, {
-   3.578070750284285*^9, 3.578070893865143*^9}, 3.5780710042807913`*^9, {
-   3.57807103619176*^9, 3.578071038486023*^9}, 3.578071158030013*^9, 
-   3.578071998119371*^9, {3.578072093338522*^9, 3.578072100175075*^9}, {
-   3.578072223670424*^9, 3.578072250375066*^9}, {3.578072298978109*^9, 
-   3.578072340876663*^9}, {3.578072379306287*^9, 3.5780724241107807`*^9}, {
-   3.578072454540403*^9, 3.578072460271873*^9}, 3.578072520456609*^9, 
-   3.578072639902264*^9, {3.578072695937097*^9, 3.578072712885351*^9}, {
-   3.578072804255258*^9, 3.578072809093367*^9}, {3.578072843475781*^9, 
-   3.578072935162264*^9}, {3.578072993923327*^9, 3.5780730498408947`*^9}, {
-   3.5780730901909103`*^9, 3.5780731192540617`*^9}, {3.5780733374561234`*^9, 
-   3.578073338353057*^9}, {3.5780734321527843`*^9, 3.578073466864694*^9}, {
-   3.578073512875492*^9, 3.578073544065077*^9}, {3.578073767248249*^9, 
-   3.578073772215794*^9}, {3.578073825323406*^9, 3.578073827218638*^9}, {
-   3.578074108878297*^9, 3.578074111713292*^9}, {3.5780746676880903`*^9, 
-   3.578074675869049*^9}, {3.578074739666482*^9, 3.578074740976089*^9}, {
-   3.578081262520459*^9, 3.578081293572945*^9}}],
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tf", ",", "5.51", ",", "\"\<time (s)\>\""}], "}"}], ",", 
+       "0.01", ",", "100", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.578330602127817*^9, 3.578330602129827*^9}, {
+  3.578330635653441*^9, 3.5783306467585497`*^9}, {3.578330836772058*^9, 
+  3.5783308505305433`*^9}, {3.578330886923448*^9, 3.5783308891305637`*^9}, {
+  3.5783309725130577`*^9, 3.5783309887058477`*^9}, {3.5783311448790216`*^9, 
+  3.57833115026779*^9}, {3.57833883298031*^9, 3.5783388433254843`*^9}, {
+  3.578338929763062*^9, 3.578338949335476*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "[", "t", "]"}], "\[Equal]", 
+  RowBox[{"30", " ", "t", " ", 
+   RowBox[{"Cos", "[", 
+    FractionBox["\[Pi]", "36"], "]"}]}]}]], "Output",
+ CellChangeTimes->{{3.578330876482419*^9, 3.5783308901769743`*^9}, 
+   3.578331151810008*^9, 3.5783385601945963`*^9, 3.578338847178207*^9, 
+   3.578338936100994*^9, 3.578339606757536*^9, 3.5783400426976957`*^9, 
+   3.5783401528196507`*^9, 3.578340607517888*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", "t", "]"}], "\[Equal]", 
+  RowBox[{"2", "-", 
+   RowBox[{"4.9`", " ", 
+    SuperscriptBox["t", "2"]}], "+", 
+   RowBox[{"30", " ", "t", " ", 
+    RowBox[{"Sin", "[", 
+     FractionBox["\[Pi]", "36"], "]"}]}]}]}]], "Output",
+ CellChangeTimes->{{3.578330876482419*^9, 3.5783308901769743`*^9}, 
+   3.578331151810008*^9, 3.5783385601945963`*^9, 3.578338847178207*^9, 
+   3.578338936100994*^9, 3.578339606757536*^9, 3.5783400426976957`*^9, 
+   3.5783401528196507`*^9, 3.578340607520483*^9}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 0, $CellContext`v0$$ = 
+   DynamicModuleBox[{$CellContext`tf$$ = 5.51, $CellContext`v0$$ = 
     30, $CellContext`vt$$ = 35, $CellContext`\[Theta]0$$ = Rational[5, 18] Pi,
      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`v0$$], 30, "initial velocity (m/s)"}, 0.1, 100}, {{
+       Hold[$CellContext`v0$$], 30, "initial velocity (m/s)"}, 0, 100}, {{
        Hold[$CellContext`\[Theta]0$$], Rational[5, 18] Pi, 
        "initial angle (rad)"}, 0.1, Rational[1, 2] Pi}, {{
-       Hold[$CellContext`vt$$], 35, "terminal velocity(m/s)"}, 0.1, 100.}, {{
-       Hold[$CellContext`t$$], 0, "time (s)"}, 0, 10.}}, Typeset`size$$ = {
-    622.8, {269.1, 152.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`v0$3148$$ = 
-    0, $CellContext`\[Theta]0$3149$$ = 0, $CellContext`vt$3150$$ = 
-    0, $CellContext`t$3151$$ = 0}, 
+       Hold[$CellContext`vt$$], 35, "terminal velocity(m/s)"}, 0, 150.}, {{
+       Hold[$CellContext`tf$$], 5.51, "time (s)"}, 0.01, 100}}, 
+    Typeset`size$$ = {500., {148., 152.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`v0$94545$$ = 0, $CellContext`\[Theta]0$94546$$ = 
+    0, $CellContext`vt$94547$$ = 0, $CellContext`tf$94548$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`t$$ = 0, $CellContext`v0$$ = 
+      "Variables" :> {$CellContext`tf$$ = 5.51, $CellContext`v0$$ = 
         30, $CellContext`vt$$ = 35, $CellContext`\[Theta]0$$ = 
         Rational[5, 18] Pi}, "ControllerVariables" :> {
-        Hold[$CellContext`v0$$, $CellContext`v0$3148$$, 0], 
-        Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$3149$$, 0], 
-        Hold[$CellContext`vt$$, $CellContext`vt$3150$$, 0], 
-        Hold[$CellContext`t$$, $CellContext`t$3151$$, 0]}, 
+        Hold[$CellContext`v0$$, $CellContext`v0$94545$$, 0], 
+        Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$94546$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$94547$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$94548$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
-      "Body" :> {$CellContext`sol = 
-         NDSolve[{$CellContext`ode1, $CellContext`ode2}, {$CellContext`x, \
-$CellContext`y}, {$CellContext`t$$, 0, 200}]} ParametricPlot[
-         Evaluate[
-          ReplaceAll[{
-            $CellContext`x[$CellContext`t$$], 
-            $CellContext`y[$CellContext`t$$]}, $CellContext`sol]], \
-{$CellContext`t$$, 0, 200}, PlotStyle -> {{Blue}, {Red}}, 
-         AxesLabel -> {"x(m)", "y (m)"}, PlotRange -> {{0, 100}, {-10, 50}}, 
-         ImageSize -> {500, 300}], 
+      "Body" :> ($CellContext`ode1 = {
+         Derivative[
+           2][$CellContext`x][$CellContext`t] == (-($CellContext`g (
+              Derivative[
+               1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2))) 
+           Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+             Derivative[1][$CellContext`y][$CellContext`t]^2], $CellContext`x[
+           0] == 0, 
+          Derivative[1][$CellContext`x][0] == $CellContext`v0$$ 
+           Cos[$CellContext`\[Theta]0$$]}; $CellContext`ode2 = {
+         Derivative[
+           2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+            1 + (Derivative[
+               1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+             Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+               Derivative[
+                 1][$CellContext`y][$CellContext`t]^2]), $CellContext`y[0] == 
+          1, Derivative[1][$CellContext`y][0] == $CellContext`v0$$ 
+           Sin[$CellContext`\[Theta]0$$]}; 
+       Module[{$CellContext`sol$ = 
+          NDSolve[{$CellContext`ode1, $CellContext`ode2}, {$CellContext`x, \
+$CellContext`y}, {$CellContext`t, 0, 200}]}, 
+         ParametricPlot[{
+           ReplaceAll[{
+             $CellContext`x[$CellContext`t], 
+             $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
+{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
+            2 + $CellContext`v0$$ 
+             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+$CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
+          PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 100}, {-10, 50}}, 
+          AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {500, 300}]]), 
       "Specifications" :> {{{$CellContext`v0$$, 30, "initial velocity (m/s)"},
-          0.1, 100, Appearance -> 
+          0, 100, Appearance -> 
          "Labeled"}, {{$CellContext`\[Theta]0$$, Rational[5, 18] Pi, 
           "initial angle (rad)"}, 0.1, Rational[1, 2] Pi, Appearance -> 
-         "Labeled"}, {{$CellContext`vt$$, 35, "terminal velocity(m/s)"}, 0.1, 
-         100., Appearance -> "Labeled"}, {{$CellContext`t$$, 0, "time (s)"}, 
-         0, 10., Appearance -> "Labeled"}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{668., {294., 299.}},
+         "Labeled"}, {{$CellContext`vt$$, 35, "terminal velocity(m/s)"}, 0, 
+         150., Appearance -> 
+         "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{543., {233., 239.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -735,269 +312,514 @@ $CellContext`y}, {$CellContext`t$$, 0, 200}]} ParametricPlot[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.578073547073865*^9, 3.5780737742135563`*^9, 3.5780741136545467`*^9, 
-   3.5780746776979094`*^9, 3.5780747420550747`*^9, 3.578080736239616*^9, {
-   3.578081274586808*^9, 3.5780812885063877`*^9}}],
+ CellChangeTimes->{{3.578330876482419*^9, 3.5783308901769743`*^9}, 
+   3.578331151810008*^9, 3.5783385601945963`*^9, 3.578338847178207*^9, 
+   3.578338936100994*^9, 3.578339606757536*^9, 3.5783400426976957`*^9, 
+   3.5783401528196507`*^9, 3.57834060766737*^9}]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(0\\)\[NoBreak] cannot be used as a \
-variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.578081288823368*^9}],
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "3", " ", "pairs", " ", "that", " ", "work", " ", "to", " ", "get", " ", 
+      "x", " ", "final"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"80", 
+       RowBox[{"m", ".", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"initial", " ", "speed"}], ",", " ", 
+          RowBox[{"initial", " ", "angle"}]}], ")"}]}]}], ":", " ", 
+      RowBox[{"(", 
+       RowBox[{"37", ",", " ", "0.791274"}], ")"}]}]}], ",", " ", 
+    RowBox[{"(", 
+     RowBox[{"50.4", ",", " ", "0.252963"}], ")"}], ",", " ", 
+    RowBox[{"(", 
+     RowBox[{"70.2", ",", " ", "0.120591"}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "3", " ", "pairs", " ", "with", " ", "out", " ", "air", " ", 
+      "resistance", " ", "to", " ", "get", " ", "x"}], " ", "=", " ", 
+     RowBox[{"80", 
+      RowBox[{"m", ".", " ", 
+       RowBox[{"(", 
+        RowBox[{"29", ",", " ", "0.576538"}], ")"}]}]}]}], ",", " ", 
+    RowBox[{"(", 
+     RowBox[{"39.8", ",", "0.235313"}], ")"}], ",", " ", 
+    RowBox[{"(", 
+     RowBox[{"27.8", ",", " ", "0.791274"}], ")"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.578331179941987*^9, 3.578331224846217*^9}, {
+  3.578331288829022*^9, 3.578331357815942*^9}, {3.5783389572012777`*^9, 
+  3.578339079227063*^9}, {3.578339119121657*^9, 3.5783391689271107`*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"firin", "'"}], " ", 
+    RowBox[{"gramp", "'"}], "s", " ", "cannon"}], "*)"}], "\n", 
   RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[t]\\)\\) \[Equal] \\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[t]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \\(\\(\\(\\(x[0]\\)\
-\\) \[Equal] 9\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\
-\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\
-\\\\ \\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\
-\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
-\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
-\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[t]\\)\\) \
-\[Equal] \\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((1 + \\(\\(Times[\\(\\(\
-\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
-\\(y[0]\\)\\) \[Equal] 2\\)\\), \
-\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
-\\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
-\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
-y}\\)\\), \\(\\({0, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
-of replacement rules nor a valid dispatch table, and so cannot be used for \
-replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
-\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
-\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.5780812888291616`*^9}],
+   RowBox[{
+    RowBox[{"g", "=", "9.8"}], ";", 
+    RowBox[{"v0", "=", "30"}], ";", 
+    RowBox[{"\[Theta]0", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"5", "*", "Pi"}], ")"}], "/", "180"}]}], ";", 
+    RowBox[{"vt", "=", "135"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ode1", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{"g", "*", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"x", "'"}], "[", "t", "]"}], "/", 
+               RowBox[{"vt", "^", "2"}]}]}], ")"}]}], "*", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
+         ",", 
+         RowBox[{
+          RowBox[{"x", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "'"}], "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"v0", "*", 
+           RowBox[{"Cos", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], ";", "\n", 
+      RowBox[{"ode2", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"y", "''"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", "g"}], "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
+                RowBox[{"vt", "^", "2"}]}], ")"}], "*", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+               "]"}]}]}], ")"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"y", "[", "0", "]"}], "\[Equal]", "1"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"v0", "*", 
+           RowBox[{"Sin", "[", "\[Theta]0", "]"}]}]}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Module", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"sol", "=", 
+          RowBox[{"NDSolve", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"ode1", ",", "ode2"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "200"}], "}"}]}], "]"}]}], "}"}], 
+        ",", 
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"x", "[", "t", "]"}], ",", 
+               RowBox[{"y", "[", "t", "]"}]}], "}"}], "/.", "sol"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"v0", "*", 
+               RowBox[{"Cos", "[", "\[Theta]0", "]"}], "*", "t"}], ",", 
+              RowBox[{"2", "+", 
+               RowBox[{"v0", "*", 
+                RowBox[{"Sin", "[", "\[Theta]0", "]"}], "*", "t"}], "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"g", "*", 
+                  RowBox[{"t", "^", "2"}]}], ")"}], "/", "2"}]}]}], "}"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "tf"}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "Blue", "}"}], ",", 
+             RowBox[{"{", "Red", "}"}]}], "}"}]}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "5000"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "10"}], ",", "500"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<x(m)\>\"", ",", "\"\<y (m)\>\""}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"800", ",", "100"}], "}"}]}]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"v0", ",", "439", ",", "\"\<initial velocity (m/s)\>\""}], 
+        "}"}], ",", "0", ",", "500", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Theta]0", ",", 
+         RowBox[{"5", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", "\"\<initial angle (rad)\>\""}], 
+        "}"}], ",", ".001", ",", 
+       RowBox[{"\[Pi]", "/", "2"}], ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"vt", ",", "135", ",", "\"\<terminal velocity(m/s)\>\""}], 
+        "}"}], ",", "0", ",", "150.", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"tf", ",", "5.51", ",", "\"\<time (s)\>\""}], "}"}], ",", 
+       "0.01", ",", "100", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5783392510766993`*^9, 3.578339316380913*^9}, {
+   3.578339508128963*^9, 3.578339583780005*^9}, 3.5783396364673557`*^9, {
+   3.578339668442008*^9, 3.57833967766952*^9}, {3.578339708520625*^9, 
+   3.578339717278138*^9}, {3.578339763349998*^9, 3.578339826958001*^9}, 
+   3.5783398705138483`*^9, 3.578339968135688*^9, {3.57834011059776*^9, 
+   3.5783401113727617`*^9}, {3.57834018586168*^9, 3.5783401866019497`*^9}, {
+   3.57834023619468*^9, 3.578340243167371*^9}}],
 
 Cell[BoxData[
- RowBox[{
+ TagBox[
   StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
-variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.578081288840506*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[t]\\)\\) \[Equal] \\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[t]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 9.`\\)\\), \
-\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[t]\\)\\) \[Equal] \\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((\\(\\(1.` \
-\[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
-\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0.`]\\)\\) \[Equal] \
-2.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0.`, \
-200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] is neither a list of replacement \
-rules nor a valid dispatch table, and so cannot be used for replacing. \\!\\(\
-\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
-ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.5780812888458443`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
-variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
-\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.578081288852737*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
-:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.5780812888578243`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], \
-"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
-SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[t]\\)\\) \[Equal] \\(\\(\\(\\(-4.355555555555556`\\)\\)\\\\ \
-\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[t]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
-\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
-\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 9.`\\)\\), \
-\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
-\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
-None]]\\)\\)[t]\\)\\) \[Equal] \\(\\(\\(\\(-9.8`\\)\\)\\\\ \\(\\((\\(\\(1.` \
-\[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\
-\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0.`]\\)\\) \[Equal] \
-2.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
-Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
-22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0.`, \
-200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] is neither a list of replacement \
-rules nor a valid dispatch table, and so cannot be used for replacing. \\!\\(\
-\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
-ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.578081288863223*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
-\[NoBreak] will be suppressed during this calculation. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
-ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.578081288869566*^9}]
+   DynamicModuleBox[{$CellContext`tf$$ = 5.51, $CellContext`v0$$ = 
+    439, $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = Rational[1, 36] 
+    Pi, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v0$$], 439, "initial velocity (m/s)"}, 0, 500}, {{
+       Hold[$CellContext`\[Theta]0$$], Rational[1, 36] Pi, 
+       "initial angle (rad)"}, 0.001, Rational[1, 2] Pi}, {{
+       Hold[$CellContext`vt$$], 135, "terminal velocity(m/s)"}, 0, 150.}, {{
+       Hold[$CellContext`tf$$], 5.51, "time (s)"}, 0.01, 100}}, 
+    Typeset`size$$ = {800., {48., 52.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`v0$94598$$ = 0, $CellContext`\[Theta]0$94599$$ = 
+    0, $CellContext`vt$94600$$ = 0, $CellContext`tf$94601$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`tf$$ = 5.51, $CellContext`v0$$ = 
+        439, $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = 
+        Rational[1, 36] Pi}, "ControllerVariables" :> {
+        Hold[$CellContext`v0$$, $CellContext`v0$94598$$, 0], 
+        Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$94599$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$94600$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$94601$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`ode1 = {
+         Derivative[
+           2][$CellContext`x][$CellContext`t] == (-($CellContext`g (
+              Derivative[
+               1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2))) 
+           Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+             Derivative[1][$CellContext`y][$CellContext`t]^2], $CellContext`x[
+           0] == 0, 
+          Derivative[1][$CellContext`x][0] == $CellContext`v0$$ 
+           Cos[$CellContext`\[Theta]0$$]}; $CellContext`ode2 = {
+         Derivative[
+           2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+            1 + (Derivative[
+               1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+             Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+               Derivative[
+                 1][$CellContext`y][$CellContext`t]^2]), $CellContext`y[0] == 
+          1, Derivative[1][$CellContext`y][0] == $CellContext`v0$$ 
+           Sin[$CellContext`\[Theta]0$$]}; 
+       Module[{$CellContext`sol$ = 
+          NDSolve[{$CellContext`ode1, $CellContext`ode2}, {$CellContext`x, \
+$CellContext`y}, {$CellContext`t, 0, 200}]}, 
+         ParametricPlot[{
+           ReplaceAll[{
+             $CellContext`x[$CellContext`t], 
+             $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
+{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
+            2 + $CellContext`v0$$ 
+             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+$CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
+          PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}}, 
+          AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
+      "Specifications" :> {{{$CellContext`v0$$, 439, 
+          "initial velocity (m/s)"}, 0, 500, Appearance -> 
+         "Labeled"}, {{$CellContext`\[Theta]0$$, Rational[1, 36] Pi, 
+          "initial angle (rad)"}, 0.001, Rational[1, 2] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`vt$$, 135, "terminal velocity(m/s)"}, 0, 
+         150., Appearance -> 
+         "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{843., {133., 139.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.578340119626474*^9, 3.578340153188898*^9, 
+  3.578340189297131*^9, 3.57834024816997*^9, 3.578340607944909*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"sol", "=", 
-       RowBox[{"NDSolve", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{"y", "''"}], "[", "x", "]"}], "+", 
-             RowBox[{"Sin", "[", 
-              RowBox[{"y", "[", "x", "]"}], "]"}]}], "\[Equal]", "0"}], ",", 
-           RowBox[{
-            RowBox[{"y", "[", "0", "]"}], "\[Equal]", 
-            RowBox[{"p", "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", 
-            RowBox[{"p", "[", 
-             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", "y", ",", 
-         RowBox[{"{", 
-          RowBox[{"x", ",", "0", ",", "T"}], "}"}]}], "]"}]}], "}"}], ",", 
-     RowBox[{"ParametricPlot", "[", 
-      RowBox[{
-       RowBox[{"Evaluate", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"y", "[", "x", "]"}], ",", 
-           RowBox[{
-            RowBox[{"y", "'"}], "[", "x", "]"}]}], "}"}], "/.", "sol"}], 
-        "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"x", ",", "0", ",", "T"}], "}"}], ",", 
-       RowBox[{"PlotRange", "\[Rule]", 
-        RowBox[{"{", 
+ RowBox[{
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`tf$$ = 16.6, $CellContext`v0$$ = 
+     173., $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = 
+     0.2615861902479528, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`v0$$], 439, "initial velocity (m/s)"}, 0, 500}, {{
+        Hold[$CellContext`\[Theta]0$$], Rational[1, 36] Pi, 
+        "initial angle (rad)"}, 0.001, Rational[1, 2] Pi}, {{
+        Hold[$CellContext`vt$$], 135, "terminal velocity(m/s)"}, 0, 150.}, {{
+        Hold[$CellContext`tf$$], 5.51, "time (s)"}, 0.01, 100}}, 
+     Typeset`size$$ = {800., {48., 52.}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`v0$6559$$ = 0, $CellContext`\[Theta]0$6560$$ = 
+     0, $CellContext`vt$6561$$ = 0, $CellContext`tf$6562$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, 
+       "Variables" :> {$CellContext`tf$$ = 5.51, $CellContext`v0$$ = 
+         439, $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = 
+         Rational[1, 36] Pi}, "ControllerVariables" :> {
+         Hold[$CellContext`v0$$, $CellContext`v0$6559$$, 0], 
+         Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$6560$$, 0], 
+         Hold[$CellContext`vt$$, $CellContext`vt$6561$$, 0], 
+         Hold[$CellContext`tf$$, $CellContext`tf$6562$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> ($CellContext`ode1 = {
+          Derivative[
+            2][$CellContext`x][$CellContext`t] == (-($CellContext`g (
+               Derivative[
+                1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2))) 
+            Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+              Derivative[
+                1][$CellContext`y][$CellContext`t]^2], $CellContext`x[0] == 0,
+            Derivative[1][$CellContext`x][0] == $CellContext`v0$$ 
+            Cos[$CellContext`\[Theta]0$$]}; $CellContext`ode2 = {
+          Derivative[
+            2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+             1 + (Derivative[
+                1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+              Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+                Derivative[
+                  1][$CellContext`y][$CellContext`t]^2]), $CellContext`y[0] == 
+           1, Derivative[1][$CellContext`y][0] == $CellContext`v0$$ 
+            Sin[$CellContext`\[Theta]0$$]}; 
+        Module[{$CellContext`sol$ = 
+           NDSolve[{$CellContext`ode1, $CellContext`ode2}, {$CellContext`x, \
+$CellContext`y}, {$CellContext`t, 0, 200}]}, 
+          ParametricPlot[{
+            ReplaceAll[{
+              $CellContext`x[$CellContext`t], 
+              $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
+{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
+             2 + $CellContext`v0$$ 
+              Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+$CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
+           PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}},
+            AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
+       "Specifications" :> {{{$CellContext`v0$$, 439, 
+           "initial velocity (m/s)"}, 0, 500, Appearance -> 
+          "Labeled"}, {{$CellContext`\[Theta]0$$, Rational[1, 36] Pi, 
+           "initial angle (rad)"}, 0.001, Rational[1, 2] Pi, Appearance -> 
+          "Labeled"}, {{$CellContext`vt$$, 135, "terminal velocity(m/s)"}, 0, 
+          150., Appearance -> 
+          "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
+          Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+      
+      ImageSizeCache->{843., {132., 138.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"for", " ", "initial", " ", "angle", " ", "of", " ", "5", " ", 
+    RowBox[{"degrees", ":", " ", 
+     RowBox[{
+     "range", " ", "goes", " ", "to", " ", "1550", "m", " ", "with", " ", 
+      "muzzle", " ", "speed", " ", "439", " ", 
+      RowBox[{"m", "/", 
+       RowBox[{"s", ".", " ", "for"}]}], " ", "initial", " ", "angle", " ", 
+      "of", " ", "10", " ", 
+      RowBox[{"degrees", ":", " ", 
+       RowBox[{"range", " ", "goes", " ", "to", " ", "2390", 
+        RowBox[{"m", ".", " ", "for"}], " ", "inital", " ", "angle", " ", 
+        "of", " ", "15", " ", 
+        RowBox[{"degrees", ":", " ", 
          RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "}"}]}]}], "]"}]}], 
-    "]"}], ",", 
-   RowBox[{"{", 
+         "range", " ", "goes", " ", "to", " ", "2750", "m"}]}]}]}]}]}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
     RowBox[{
-     RowBox[{"{", 
-      RowBox[{"p", ",", 
-       RowBox[{"{", 
-        RowBox[{"2", ",", "1"}], "}"}]}], "}"}], ",", "Locator"}], "}"}], ",", 
-   RowBox[{"{", 
+    "at", " ", "an", " ", "initial", " ", "angle", " ", "of", " ", "5", " ", 
+     "degrees"}], ",", " ", 
     RowBox[{
-     RowBox[{"{", 
-      RowBox[{"T", ",", "10"}], "}"}], ",", "0", ",", "100"}], "}"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.578073302983099*^9, 3.578073302984799*^9}}],
+    "the", " ", "initial", " ", "velocity", " ", "must", " ", "be", " ", 
+     "reduced", " ", "to", " ", "264", 
+     RowBox[{"m", "/", "s"}], " ", "to", " ", "stay", " ", "within", " ", "a",
+      " ", "range", " ", "of", " ", "1", " ", 
+     RowBox[{"km", ".", "at"}], " ", "initial", " ", "angle", " ", "of", " ", 
+     "10"}], ",", " ", 
+    RowBox[{
+    "the", " ", "initial", " ", "velocity", " ", "must", " ", "be", " ", 
+     "reduced", " ", "to", " ", "210", 
+     RowBox[{"m", "/", "s"}], " ", "to", "  ", "stay", " ", "wthin", " ", "1", 
+     RowBox[{"km", ".", " ", "for"}], " ", "an", " ", "initial", " ", "angle",
+      " ", "of", " ", "15"}], ",", " ", 
+    RowBox[{
+    "the", " ", "initial", " ", "velocity", " ", "must", " ", "be", " ", 
+     "reduced", " ", "to", " ", "173", 
+     RowBox[{"m", "/", "s"}], " ", "to", " ", "stay", " ", "within", " ", "1", 
+     RowBox[{"km", "."}]}]}], "*)"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.578340053088443*^9, 3.578340105614332*^9}, {
+  3.5783402126012917`*^9, 3.578340225459354*^9}, {3.578340285097539*^9, 
+  3.578340289672783*^9}, {3.578340340772171*^9, 3.578340357325109*^9}, {
+  3.5783403906852217`*^9, 3.578340399091981*^9}, {3.578340450328651*^9, 
+  3.5783406008142014`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`p$$ = {2, 1}, $CellContext`T$$ = 3.6, 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+   DynamicModuleBox[{$CellContext`tf$$ = 16.6, $CellContext`v0$$ = 
+    173., $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = 
+    0.2615861902479528, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`p$$], {2, 1}}, Automatic}, {{
-       Hold[$CellContext`T$$], 10}, 0, 100}}, Typeset`size$$ = {
-    360., {135., 140.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`T$1574$$ = 0}, 
+       Hold[$CellContext`v0$$], 173., "initial velocity (m/s)"}, 0, 500}, {{
+       Hold[$CellContext`\[Theta]0$$], 0.2615861902479528, 
+       "initial angle (rad)"}, 0.001, Rational[1, 2] Pi}, {{
+       Hold[$CellContext`vt$$], 135, "terminal velocity(m/s)"}, 0, 150.}, {{
+       Hold[$CellContext`tf$$], 16.6, "time (s)"}, 0.01, 100}}, 
+    Typeset`size$$ = {800., {48., 52.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`v0$94712$$ = 0, $CellContext`\[Theta]0$94713$$ = 
+    0, $CellContext`vt$94714$$ = 0, $CellContext`tf$94715$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`p$$ = {2, 1}, $CellContext`T$$ = 10}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`T$$, $CellContext`T$1574$$, 0]}, 
+      "Variables" :> {$CellContext`tf$$ = 16.6, $CellContext`v0$$ = 
+        173., $CellContext`vt$$ = 135, $CellContext`\[Theta]0$$ = 
+        0.2615861902479528}, "ControllerVariables" :> {
+        Hold[$CellContext`v0$$, $CellContext`v0$94712$$, 0], 
+        Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$94713$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$94714$$, 0], 
+        Hold[$CellContext`tf$$, $CellContext`tf$94715$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> 
-      Module[{$CellContext`sol$ = 
-         NDSolve[{Derivative[2][$CellContext`y][$CellContext`x] + Sin[
-               $CellContext`y[$CellContext`x]] == 0, $CellContext`y[0] == 
-            Part[$CellContext`p$$, 1], Derivative[1][$CellContext`y][0] == 
-            Part[$CellContext`p$$, 2]}, $CellContext`y, {$CellContext`x, 
-            0, $CellContext`T$$}]}, 
-        ParametricPlot[
-         Evaluate[
-          ReplaceAll[{
-            $CellContext`y[$CellContext`x], 
-            Derivative[
-            1][$CellContext`y][$CellContext`x]}, $CellContext`sol$]], \
-{$CellContext`x, 0, $CellContext`T$$}, PlotRange -> {{-4, 4}, {-3, 3}}]], 
-      "Specifications" :> {{{$CellContext`p$$, {2, 1}}, Automatic, 
-         ControlType -> Locator}, {{$CellContext`T$$, 10}, 0, 100}}, 
-      "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {181., 186.}},
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`ode1 = {
+         Derivative[
+           2][$CellContext`x][$CellContext`t] == (-($CellContext`g (
+              Derivative[
+               1][$CellContext`x][$CellContext`t]/$CellContext`vt$$^2))) 
+           Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+             Derivative[1][$CellContext`y][$CellContext`t]^2], $CellContext`x[
+           0] == 0, 
+          Derivative[1][$CellContext`x][0] == $CellContext`v0$$ 
+           Cos[$CellContext`\[Theta]0$$]}; $CellContext`ode2 = {
+         Derivative[
+           2][$CellContext`y][$CellContext`t] == (-$CellContext`g) (
+            1 + (Derivative[
+               1][$CellContext`y][$CellContext`t]/$CellContext`vt$$^2) 
+             Sqrt[Derivative[1][$CellContext`x][$CellContext`t]^2 + 
+               Derivative[
+                 1][$CellContext`y][$CellContext`t]^2]), $CellContext`y[0] == 
+          1, Derivative[1][$CellContext`y][0] == $CellContext`v0$$ 
+           Sin[$CellContext`\[Theta]0$$]}; 
+       Module[{$CellContext`sol$ = 
+          NDSolve[{$CellContext`ode1, $CellContext`ode2}, {$CellContext`x, \
+$CellContext`y}, {$CellContext`t, 0, 200}]}, 
+         ParametricPlot[{
+           ReplaceAll[{
+             $CellContext`x[$CellContext`t], 
+             $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
+{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
+            2 + $CellContext`v0$$ 
+             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+$CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
+          PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}}, 
+          AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
+      "Specifications" :> {{{$CellContext`v0$$, 173., 
+          "initial velocity (m/s)"}, 0, 500, Appearance -> 
+         "Labeled"}, {{$CellContext`\[Theta]0$$, 0.2615861902479528, 
+          "initial angle (rad)"}, 0.001, Rational[1, 2] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`vt$$, 135, "terminal velocity(m/s)"}, 0, 
+         150., Appearance -> 
+         "Labeled"}, {{$CellContext`tf$$, 16.6, "time (s)"}, 0.01, 100, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{843., {132., 138.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1007,12 +829,14 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.578073305487515*^9, 3.57808074419011*^9}]
+ CellChangeTimes->{{3.578340153962425*^9, 3.578340172655737*^9}, 
+   3.578340608059299*^9}]
 }, Open  ]]
 },
-WindowSize->{829, 943},
-WindowMargins->{{Automatic, 16}, {Automatic, 0}},
-FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+WindowSize->{1000, 929},
+WindowMargins->{{52, Automatic}, {Automatic, 2}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 22, \
+2012)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1027,46 +851,19 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 5349, 140, 240, "Input"],
-Cell[5919, 164, 1308, 22, 66, "Message"],
-Cell[7230, 188, 518, 11, 24, "Message"],
-Cell[7751, 201, 2230, 37, 174, "Message"],
-Cell[9984, 240, 516, 11, 24, "Message"],
-Cell[10503, 253, 2177, 36, 146, "Message"],
-Cell[12683, 291, 513, 11, 24, "Message"],
-Cell[13199, 304, 584, 12, 24, "Message"],
-Cell[13786, 318, 2220, 38, 174, "Message"],
-Cell[16009, 358, 584, 12, 24, "Message"],
-Cell[16596, 372, 575, 18, 363, "Output"]
+Cell[579, 22, 6807, 184, 223, "Input"],
+Cell[7389, 208, 440, 9, 45, "Output"],
+Cell[7832, 219, 529, 12, 45, "Output"],
+Cell[8364, 233, 4619, 84, 489, "Output"]
 }, Open  ]],
-Cell[17186, 393, 92, 1, 30, "Input"],
+Cell[12998, 320, 1424, 38, 73, "Input"],
 Cell[CellGroupData[{
-Cell[17303, 398, 1225, 17, 30, "Input"],
-Cell[18531, 417, 608, 12, 43, "Message"],
-Cell[19142, 431, 665, 13, 43, "Message"],
-Cell[19810, 446, 606, 12, 43, "Message"],
-Cell[20419, 460, 705, 15, 24, "Message"]
-}, Open  ]],
-Cell[21139, 478, 662, 9, 30, "Input"],
-Cell[21804, 489, 338, 5, 30, "Input"],
-Cell[22145, 496, 90, 1, 30, "Input"],
-Cell[22238, 499, 92, 1, 30, "Input"],
-Cell[22333, 502, 94, 1, 30, "Input"],
-Cell[CellGroupData[{
-Cell[22452, 507, 6668, 169, 259, "Input"],
-Cell[29123, 678, 3339, 62, 610, "Output"],
-Cell[32465, 742, 445, 10, 24, "Message"],
-Cell[32913, 754, 1827, 30, 113, "Message"],
-Cell[34743, 786, 447, 10, 24, "Message"],
-Cell[35193, 798, 1710, 28, 94, "Message"],
-Cell[36906, 828, 447, 10, 24, "Message"],
-Cell[37356, 840, 533, 11, 24, "Message"],
-Cell[37892, 853, 1708, 28, 94, "Message"],
-Cell[39603, 883, 533, 11, 24, "Message"]
+Cell[14447, 362, 6373, 170, 193, "Input"],
+Cell[20823, 534, 4503, 82, 289, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[40173, 899, 2009, 61, 107, "Input"],
-Cell[42185, 962, 2337, 47, 384, "Output"]
+Cell[25363, 621, 6665, 127, 418, InheritFromParent],
+Cell[32031, 750, 4467, 82, 287, "Output"]
 }, Open  ]]
 }
 ]
