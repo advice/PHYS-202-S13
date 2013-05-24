@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     37210,        863]
-NotebookOptionsPosition[     36514,        835]
-NotebookOutlinePosition[     36867,        851]
-CellTagsIndexPosition[     36824,        848]
+NotebookDataLength[    186622,       3909]
+NotebookOptionsPosition[    179228,       3729]
+NotebookOutlinePosition[    179564,       3744]
+CellTagsIndexPosition[    179521,       3741]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -288,9 +288,9 @@ $CellContext`y}, {$CellContext`t, 0, 200}]},
            ReplaceAll[{
              $CellContext`x[$CellContext`t], 
              $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
-{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
-            2 + $CellContext`v0$$ 
-             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+{($CellContext`v0$$ Cos[$CellContext`\[Theta]0$$]) $CellContext`t, 
+            2 + ($CellContext`v0$$ 
+              Sin[$CellContext`\[Theta]0$$]) $CellContext`t - ($CellContext`g \
 $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
           PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 100}, {-10, 50}}, 
           AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {500, 300}]]), 
@@ -302,7 +302,7 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
          150., Appearance -> 
          "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
          Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{543., {233., 239.}},
+     ImageSizeCache->{545., {233., 238.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -315,7 +315,699 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
  CellChangeTimes->{{3.578330876482419*^9, 3.5783308901769743`*^9}, 
    3.578331151810008*^9, 3.5783385601945963`*^9, 3.578338847178207*^9, 
    3.578338936100994*^9, 3.578339606757536*^9, 3.5783400426976957`*^9, 
-   3.5783401528196507`*^9, 3.57834060766737*^9}]
+   3.5783401528196507`*^9, 3.57834060766737*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783450971465483`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783450972460947`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\\)\\)\\)\\), \\(\
+\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \\(\
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097350835*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097356594*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\
+\\)\\)\\)\\), \\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097361453*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783450973679867`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097372981*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.0008163265306122449`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097379157*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345097385706*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783450990223837`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099087387*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\\)\\)\\)\\), \\(\
+\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \\(\
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099094208*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783450990988894`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\
+\\)\\)\\)\\), \\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099105115*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099110262*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099115726*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.0008163265306122449`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834509912117*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345099128002*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113806704*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451138847103`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\\)\\)\\)\\), \\(\
+\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \\(\
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113891279*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113896317*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\
+\\)\\)\\)\\), \\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113903019*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451139087353`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113913467*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.0008163265306122449`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113918786*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345113925218*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138948367*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345139061677*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\\)\\)\\)\\), \\(\
+\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \\(\
+\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451390675297`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834513907444*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/1225\\)\\)\
+\\)\\)\\)\\), \\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(30\\\\ \
+\\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451390801277`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345139087081*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345139092431*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.0008163265306122449`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+19.283628290596177`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 22.98133329356934`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345139097952*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834513916884*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -589,9 +1281,9 @@ $CellContext`y}, {$CellContext`t, 0, 200}]},
            ReplaceAll[{
              $CellContext`x[$CellContext`t], 
              $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
-{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
-            2 + $CellContext`v0$$ 
-             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+{($CellContext`v0$$ Cos[$CellContext`\[Theta]0$$]) $CellContext`t, 
+            2 + ($CellContext`v0$$ 
+              Sin[$CellContext`\[Theta]0$$]) $CellContext`t - ($CellContext`g \
 $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
           PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}}, 
           AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
@@ -603,7 +1295,7 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
          150., Appearance -> 
          "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
          Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{843., {133., 139.}},
+     ImageSizeCache->{845., {132., 137.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -614,7 +1306,1039 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.578340119626474*^9, 3.578340153188898*^9, 
-  3.578340189297131*^9, 3.57834024816997*^9, 3.578340607944909*^9}]
+  3.578340189297131*^9, 3.57834024816997*^9, 3.578340607944909*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102641941*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102789173*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102798429*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102808443*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102817224*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102829319*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102839326*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102848793*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451028565397`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451090973673`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109111001*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109116432*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109123376*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109128728*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109135737*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109141273*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510914697*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109153586*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345110930642*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111051449*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111058032*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111063593*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111070168*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451110755587`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111081229*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111086957*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111093526*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111555537*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111670437*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451116758204`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451116826887`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111688222*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111695221*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111700725*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451117062893`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111713221*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122056999*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451220810204`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122086673*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122093383*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834512209908*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834512210588*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122111383*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122117041*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345122123662*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138435697*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138515647*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.`, 0, 200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list \
+of replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451385211563`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138527424*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] \\(\\(439\\\\ \\(\\(Cos[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \\(\\(439\\\\ \
+\\(\\(Sin[\\(\\(Times[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)]\\)\\)\\)\\)\\)\\)}\\)\\)}\\)\\), \\(\\({x, \
+y}\\)\\), \\(\\({0.00011244897959183674`, 0, 200}\\)\\)\\)\\)]\\)}\\)\
+\[NoBreak] is neither a list of replacement rules nor a valid dispatch table, \
+and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138532671*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00011244897959183674`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138539765*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138545308*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00011244897959183674`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+437.32947246227627`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00011244897959183674`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 38.26137106622193`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00011244897959183674`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451385512123`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345138557588*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -677,12 +2401,13 @@ $CellContext`y}, {$CellContext`t, 0, 200}]},
             ReplaceAll[{
               $CellContext`x[$CellContext`t], 
               $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
-{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
-             2 + $CellContext`v0$$ 
-              Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
-$CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
-           PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}},
-            AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
+{($CellContext`v0$$ Cos[$CellContext`\[Theta]0$$]) $CellContext`t, 
+             2 + ($CellContext`v0$$ 
+               Sin[$CellContext`\[Theta]0$$]) $CellContext`t - \
+($CellContext`g $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
+            PlotStyle -> {{Blue}, {Red}}, 
+           PlotRange -> {{0, 5000}, {-10, 500}}, 
+           AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
        "Specifications" :> {{{$CellContext`v0$$, 439, 
            "initial velocity (m/s)"}, 0, 500, Appearance -> 
           "Labeled"}, {{$CellContext`\[Theta]0$$, Rational[1, 36] Pi, 
@@ -692,7 +2417,7 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
           "Labeled"}, {{$CellContext`tf$$, 5.51, "time (s)"}, 0.01, 100, 
           Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
       
-      ImageSizeCache->{843., {132., 138.}},
+      ImageSizeCache->{845., {130., 135.}},
       SingleEvaluation->True],
      Deinitialization:>None,
      DynamicModuleValues:>{},
@@ -805,9 +2530,9 @@ $CellContext`y}, {$CellContext`t, 0, 200}]},
            ReplaceAll[{
              $CellContext`x[$CellContext`t], 
              $CellContext`y[$CellContext`t]}, $CellContext`sol$], \
-{$CellContext`v0$$ Cos[$CellContext`\[Theta]0$$] $CellContext`t, 
-            2 + $CellContext`v0$$ 
-             Sin[$CellContext`\[Theta]0$$] $CellContext`t - ($CellContext`g \
+{($CellContext`v0$$ Cos[$CellContext`\[Theta]0$$]) $CellContext`t, 
+            2 + ($CellContext`v0$$ 
+              Sin[$CellContext`\[Theta]0$$]) $CellContext`t - ($CellContext`g \
 $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$}, 
           PlotStyle -> {{Blue}, {Red}}, PlotRange -> {{0, 5000}, {-10, 500}}, 
           AxesLabel -> {"x(m)", "y (m)"}, ImageSize -> {800, 100}]]), 
@@ -819,7 +2544,7 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
          150., Appearance -> 
          "Labeled"}, {{$CellContext`tf$$, 16.6, "time (s)"}, 0.01, 100, 
          Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{843., {132., 138.}},
+     ImageSizeCache->{845., {130., 135.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -830,13 +2555,1181 @@ $CellContext`t^2)/2}}, {$CellContext`t, 0, $CellContext`tf$$},
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.578340153962425*^9, 3.578340172655737*^9}, 
-   3.578340608059299*^9}]
+   3.578340608059299*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345102918751*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451029807587`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451029941607`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345103003255*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510300863*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345103015737*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345103023787*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345103035263*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345103044201*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451046305943`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345104653092*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451046580343`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345104665694*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345104669758*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451046750307`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345104678936*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510468305*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345104688369*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109337755*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109359332*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451093643208`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510937037*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109374907*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451093810463`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451093861303`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109391168*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510939753*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109505934*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109579055*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109584539*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451095903*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109595272*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109601286*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834510960647*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109612053*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345109618602*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451111833973`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111223424*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111228599*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111234703*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834511123979*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111245905*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.57834511125071*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345111255866*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451112623796`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124930808*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124948379*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124953662*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124960422*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451249658546`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451249719057`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124976808*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451249822407`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345124988894*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "ndnum"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Encountered non-numerical value for a derivative at \
+\[NoBreak]\\!\\(t\\)\[NoBreak] == \[NoBreak]\\!\\(0.`\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NDSolve/ndnum\\\", \
+ButtonNote -> \\\"NDSolve::ndnum\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125081493*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.`\\)\[NoBreak] cannot be used as a \
+variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5783451251059*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\)\\\\ \\@\\(Plus[\\(\\(\
+\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \\(\\((1 + \
+\\(\\(Times[\\(\\(\[LeftSkeleton] 3 \
+\[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \
+\[Equal] 1\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\
+\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] \
+44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125111093*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125117126*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(-\\(\\(\\(g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \
+\[RightSkeleton]\\)\\)]\\)\\)\\/18225\\)\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0]\\)\\) \[Equal] 0\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"x\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \
+\[Equal] 167.11471021868962`\\)\\)}\\)\\), \
+\\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \
+\\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-g\\)\\)\\\\ \
+\\(\\((1 + \\(\\(Times[\\(\\(\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\
+\\)\\)\\)\\)\\)\\), \\(\\(\\(\\(y[0]\\)\\) \[Equal] 1\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0]\\)\\) \[Equal] 44.740067372807964`\\)\
+\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \\(\\({0.00033877551020408165`, 0, \
+200}\\)\\)\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement rules nor \
+a valid dispatch table, and so cannot be used for replacing. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125122113*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NDSolve", "::", "dsvar"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(0.00033877551020408165`\\)\[NoBreak] \
+cannot be used as a variable. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/NDSolve/dsvar\\\", ButtonNote -> \
+\\\"NDSolve::dsvar\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125128586*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NDSolve \
+:: dsvar\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125133752*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], \
+"\<\"\[NoBreak]\\!\\({\\(NDSolve[\\(\\(\\(\\({\\(\\({\\(\\(\\(\\(\\(\\(\\*\
+SuperscriptBox[\\\"x\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \
+\\(\\(\\(\\(-0.00005486968449931413`\\)\\)\\\\ g\\\\ \
+\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.00033877551020408165`]\\)\\)\\\\ \
+\\@\\(Plus[\\(\\(\[LeftSkeleton] 2 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\), \
+\\(\\(\\(\\(x[0.`]\\)\\) \[Equal] 0.`\\)\\), \
+\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"x\\\", \\\"\[Prime]\\\", \
+Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \[Equal] \
+167.11471021868962`\\)\\)}\\)\\), \\(\\({\\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\
+\\\"y\\\", \\\"\[Prime]\[Prime]\\\", Rule[MultilineFunction, \
+None]]\\)\\)[0.00033877551020408165`]\\)\\) \[Equal] \\(\\(\\(\\(-1.`\\)\\)\\\
+\\ g\\\\ \\(\\((\\(\\(1.` \[VeryThinSpace]\\)\\) + \\(\\(Times[\\(\\(\
+\[LeftSkeleton] 3 \[RightSkeleton]\\)\\)]\\)\\))\\)\\)\\)\\)\\)\\), \\(\\(\\(\
+\\(y[0.`]\\)\\) \[Equal] 1.`\\)\\), \\(\\(\\(\\(\\(\\(\\*SuperscriptBox[\\\"y\
+\\\", \\\"\[Prime]\\\", Rule[MultilineFunction, None]]\\)\\)[0.`]\\)\\) \
+\[Equal] 44.740067372807964`\\)\\)}\\)\\)}\\)\\), \\(\\({x, y}\\)\\), \
+\\(\\({0.00033877551020408165`, 0.`, 200.`}\\)\\)\\)\\)]\\)}\\)\\n\[NoBreak] \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", ButtonNote -> \
+\\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125139256*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.578345125145638*^9}]
 }, Open  ]]
 },
-WindowSize->{1000, 929},
-WindowMargins->{{52, Automatic}, {Automatic, 2}},
-FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 22, \
-2012)",
+WindowSize->{1000, 856},
+WindowMargins->{{52, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -851,19 +3744,172 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 6807, 184, 223, "Input"],
+Cell[579, 22, 6807, 184, 278, "Input"],
 Cell[7389, 208, 440, 9, 45, "Output"],
 Cell[7832, 219, 529, 12, 45, "Output"],
-Cell[8364, 233, 4619, 84, 489, "Output"]
+Cell[8364, 233, 4624, 84, 488, "Output"],
+Cell[12991, 319, 506, 10, 24, "Message"],
+Cell[13500, 331, 449, 10, 24, "Message"],
+Cell[13952, 343, 1828, 31, 133, "Message"],
+Cell[15783, 376, 467, 10, 24, "Message"],
+Cell[16253, 388, 1910, 32, 133, "Message"],
+Cell[18166, 422, 469, 10, 24, "Message"],
+Cell[18638, 434, 531, 11, 24, "Message"],
+Cell[19172, 447, 1813, 30, 113, "Message"],
+Cell[20988, 479, 533, 11, 24, "Message"],
+Cell[21524, 492, 506, 10, 24, "Message"],
+Cell[22033, 504, 447, 10, 24, "Message"],
+Cell[22483, 516, 1828, 31, 133, "Message"],
+Cell[24314, 549, 469, 10, 24, "Message"],
+Cell[24786, 561, 1910, 32, 133, "Message"],
+Cell[26699, 595, 467, 10, 24, "Message"],
+Cell[27169, 607, 531, 11, 24, "Message"],
+Cell[27703, 620, 1812, 30, 113, "Message"],
+Cell[29518, 652, 533, 11, 24, "Message"],
+Cell[30054, 665, 504, 10, 24, "Message"],
+Cell[30561, 677, 449, 10, 24, "Message"],
+Cell[31013, 689, 1828, 31, 133, "Message"],
+Cell[32844, 722, 467, 10, 24, "Message"],
+Cell[33314, 734, 1910, 32, 133, "Message"],
+Cell[35227, 768, 469, 10, 24, "Message"],
+Cell[35699, 780, 531, 11, 24, "Message"],
+Cell[36233, 793, 1813, 30, 113, "Message"],
+Cell[38049, 825, 533, 11, 24, "Message"],
+Cell[38585, 838, 504, 10, 24, "Message"],
+Cell[39092, 850, 447, 10, 24, "Message"],
+Cell[39542, 862, 1830, 31, 133, "Message"],
+Cell[41375, 895, 466, 10, 24, "Message"],
+Cell[41844, 907, 1912, 32, 133, "Message"],
+Cell[43759, 941, 467, 10, 24, "Message"],
+Cell[44229, 953, 531, 11, 24, "Message"],
+Cell[44763, 966, 1813, 30, 113, "Message"],
+Cell[46579, 998, 532, 11, 24, "Message"]
 }, Open  ]],
-Cell[12998, 320, 1424, 38, 73, "Input"],
+Cell[47126, 1012, 1424, 38, 88, "Input"],
 Cell[CellGroupData[{
-Cell[14447, 362, 6373, 170, 193, "Input"],
-Cell[20823, 534, 4503, 82, 289, "Output"]
+Cell[48575, 1054, 6373, 170, 240, "Input"],
+Cell[54951, 1226, 4508, 82, 286, "Output"],
+Cell[59462, 1310, 504, 10, 24, "Message"],
+Cell[59969, 1322, 447, 10, 24, "Message"],
+Cell[60419, 1334, 1829, 30, 133, "Message"],
+Cell[62251, 1366, 467, 10, 24, "Message"],
+Cell[62721, 1378, 1913, 32, 133, "Message"],
+Cell[64637, 1412, 467, 10, 24, "Message"],
+Cell[65107, 1424, 531, 11, 24, "Message"],
+Cell[65641, 1437, 1814, 30, 113, "Message"],
+Cell[67458, 1469, 535, 11, 24, "Message"],
+Cell[67996, 1482, 506, 10, 24, "Message"],
+Cell[68505, 1494, 447, 10, 24, "Message"],
+Cell[68955, 1506, 1829, 30, 133, "Message"],
+Cell[70787, 1538, 467, 10, 24, "Message"],
+Cell[71257, 1550, 1913, 32, 133, "Message"],
+Cell[73173, 1584, 467, 10, 24, "Message"],
+Cell[73643, 1596, 531, 11, 24, "Message"],
+Cell[74177, 1609, 1813, 30, 113, "Message"],
+Cell[75993, 1641, 533, 11, 24, "Message"],
+Cell[76529, 1654, 504, 10, 24, "Message"],
+Cell[77036, 1666, 447, 10, 24, "Message"],
+Cell[77486, 1678, 1829, 30, 133, "Message"],
+Cell[79318, 1710, 467, 10, 24, "Message"],
+Cell[79788, 1722, 1913, 32, 133, "Message"],
+Cell[81704, 1756, 469, 10, 24, "Message"],
+Cell[82176, 1768, 531, 11, 24, "Message"],
+Cell[82710, 1781, 1814, 30, 113, "Message"],
+Cell[84527, 1813, 533, 11, 24, "Message"],
+Cell[85063, 1826, 504, 10, 24, "Message"],
+Cell[85570, 1838, 447, 10, 24, "Message"],
+Cell[86020, 1850, 1831, 30, 133, "Message"],
+Cell[87854, 1882, 469, 10, 24, "Message"],
+Cell[88326, 1894, 1913, 32, 133, "Message"],
+Cell[90242, 1928, 467, 10, 24, "Message"],
+Cell[90712, 1940, 531, 11, 24, "Message"],
+Cell[91246, 1953, 1816, 30, 113, "Message"],
+Cell[93065, 1985, 533, 11, 24, "Message"],
+Cell[93601, 1998, 504, 10, 24, "Message"],
+Cell[94108, 2010, 449, 10, 24, "Message"],
+Cell[94560, 2022, 1829, 30, 133, "Message"],
+Cell[96392, 2054, 467, 10, 24, "Message"],
+Cell[96862, 2066, 1912, 32, 133, "Message"],
+Cell[98777, 2100, 466, 10, 24, "Message"],
+Cell[99246, 2112, 531, 11, 24, "Message"],
+Cell[99780, 2125, 1814, 30, 113, "Message"],
+Cell[101597, 2157, 533, 11, 24, "Message"],
+Cell[102133, 2170, 504, 10, 24, "Message"],
+Cell[102640, 2182, 447, 10, 24, "Message"],
+Cell[103090, 2194, 1831, 30, 133, "Message"],
+Cell[104924, 2226, 467, 10, 24, "Message"],
+Cell[105394, 2238, 1913, 32, 133, "Message"],
+Cell[107310, 2272, 467, 10, 24, "Message"],
+Cell[107780, 2284, 531, 11, 24, "Message"],
+Cell[108314, 2297, 1816, 30, 113, "Message"],
+Cell[110133, 2329, 533, 11, 24, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25363, 621, 6665, 127, 418, InheritFromParent],
-Cell[32031, 750, 4467, 82, 287, "Output"]
+Cell[110703, 2345, 6682, 128, 447, "Input"],
+Cell[117388, 2475, 4472, 82, 282, "Output"],
+Cell[121863, 2559, 504, 10, 24, "Message"],
+Cell[122370, 2571, 449, 10, 24, "Message"],
+Cell[122822, 2583, 1661, 28, 112, "Message"],
+Cell[124486, 2613, 467, 10, 24, "Message"],
+Cell[124956, 2625, 1740, 29, 133, "Message"],
+Cell[126699, 2656, 467, 10, 24, "Message"],
+Cell[127169, 2668, 531, 11, 24, "Message"],
+Cell[127703, 2681, 1815, 30, 113, "Message"],
+Cell[129521, 2713, 533, 11, 24, "Message"],
+Cell[130057, 2726, 506, 10, 24, "Message"],
+Cell[130566, 2738, 447, 10, 24, "Message"],
+Cell[131016, 2750, 1661, 28, 112, "Message"],
+Cell[132680, 2780, 467, 10, 24, "Message"],
+Cell[133150, 2792, 1741, 29, 133, "Message"],
+Cell[134894, 2823, 469, 10, 24, "Message"],
+Cell[135366, 2835, 531, 11, 24, "Message"],
+Cell[135900, 2848, 1814, 30, 113, "Message"],
+Cell[137717, 2880, 533, 11, 24, "Message"],
+Cell[138253, 2893, 504, 10, 24, "Message"],
+Cell[138760, 2905, 447, 10, 24, "Message"],
+Cell[139210, 2917, 1661, 28, 112, "Message"],
+Cell[140874, 2947, 466, 10, 24, "Message"],
+Cell[141343, 2959, 1741, 29, 133, "Message"],
+Cell[143087, 2990, 469, 10, 24, "Message"],
+Cell[143559, 3002, 533, 11, 24, "Message"],
+Cell[144095, 3015, 1815, 30, 113, "Message"],
+Cell[145913, 3047, 532, 11, 24, "Message"],
+Cell[146448, 3060, 504, 10, 24, "Message"],
+Cell[146955, 3072, 447, 10, 24, "Message"],
+Cell[147405, 3084, 1659, 28, 112, "Message"],
+Cell[149067, 3114, 465, 10, 24, "Message"],
+Cell[149535, 3126, 1741, 29, 133, "Message"],
+Cell[151279, 3157, 467, 10, 24, "Message"],
+Cell[151749, 3169, 530, 11, 24, "Message"],
+Cell[152282, 3182, 1815, 30, 113, "Message"],
+Cell[154100, 3214, 533, 11, 24, "Message"],
+Cell[154636, 3227, 506, 10, 24, "Message"],
+Cell[155145, 3239, 447, 10, 24, "Message"],
+Cell[155595, 3251, 1659, 28, 112, "Message"],
+Cell[157257, 3281, 467, 10, 24, "Message"],
+Cell[157727, 3293, 1740, 29, 133, "Message"],
+Cell[159470, 3324, 467, 10, 24, "Message"],
+Cell[159940, 3336, 530, 11, 24, "Message"],
+Cell[160473, 3349, 1815, 30, 113, "Message"],
+Cell[162291, 3381, 535, 11, 24, "Message"],
+Cell[162829, 3394, 504, 10, 24, "Message"],
+Cell[163336, 3406, 447, 10, 24, "Message"],
+Cell[163786, 3418, 1659, 28, 112, "Message"],
+Cell[165448, 3448, 467, 10, 24, "Message"],
+Cell[165918, 3460, 1743, 29, 133, "Message"],
+Cell[167664, 3491, 469, 10, 24, "Message"],
+Cell[168136, 3503, 531, 11, 24, "Message"],
+Cell[168670, 3516, 1817, 30, 113, "Message"],
+Cell[170490, 3548, 533, 11, 24, "Message"],
+Cell[171026, 3561, 504, 10, 24, "Message"],
+Cell[171533, 3573, 445, 10, 24, "Message"],
+Cell[171981, 3585, 1659, 28, 112, "Message"],
+Cell[173643, 3615, 467, 10, 24, "Message"],
+Cell[174113, 3627, 1741, 29, 133, "Message"],
+Cell[175857, 3658, 467, 10, 24, "Message"],
+Cell[176327, 3670, 531, 11, 24, "Message"],
+Cell[176861, 3683, 1815, 30, 113, "Message"],
+Cell[178679, 3715, 533, 11, 24, "Message"]
 }, Open  ]]
 }
 ]
